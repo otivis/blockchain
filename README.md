@@ -32,3 +32,18 @@ def get_data(txid):
     return json.loads(response.content)
 ```
 
+<p>isso foi adicionado no arquivo default.py nos controladores da aplicação </p>
+
+também foi criada um código "blockchain.py" dentro dos módulos da aplicação para ser importado posteriormente pelo defaul.py para ser usado.
+
+```
+import urllib.request
+import json
+
+def get_data(txid):
+    url = "https://blockchain.info/rawtx/{}".format(txid)
+    with urllib.request.urlopen(url) as response:
+        data = json.loads(response.read().decode())
+    return data
+```
+
