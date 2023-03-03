@@ -151,6 +151,8 @@ auth.settings.login_form = OAuthAccount(
 usando lib Oauth2 do google. 
 
 <P> para solucionar tentei criar um arquivo chamado auth.py dentro da pastas controladores da aplicação com o seguinte codigo:</p>
+
+
 ```
 from gluon.contrib.login_methods.oauth20_account import OAuthAccount
 from gluon.tools import fetch
@@ -220,6 +222,8 @@ def api():
     response.headers['Content-Type'] = 'application/json'
     return json.dumps({'txid': request.vars.txid, 'inputs': tx_inputs, 'outputs': tx_outputs})
 ```
+
+
 porém sem sucesso, deu uma sequência de erros relacionado ao banco de dados, o repositório esta aberto para commits no diretório Blockchain.
 
 
